@@ -1,4 +1,5 @@
-export MOODLE_DOCKER_WWWROOT=/Users/kwiliarty/docker/stacks/hc34/moodle
+# You need to set the path to your Moodle below
+export MOODLE_DOCKER_WWWROOT=/full/phsyical/path/to/your/moodle
 export MOODLE_DOCKER_DB=mysql
 export MOODLE_DOCKER_PHP_VERSION=7.1
 export MOODLE_DOCKER_BROWSER=chrome
@@ -6,8 +7,7 @@ export MOODLE_DOCKER_WEB_HOST=hc34.local
 export MOODLE_DOCKER_WEB_PORT=8034
 export MOODLE_DOCKER_SELENIUM_VNC_PORT=5934
 
-# My own convenience stuff
-
+# Convenience aliases
 alias mocker="${MOODLE_DOCKER_WWWROOT%/moodle}/bin/moodle-docker-compose"
 alias mocker-behat="mocker exec webserver vendor/bin/behat --config /var/www/behatdata/behatrun/behat/behat.yml"
 alias mocker-cron="mocker exec webserver php admin/cli/cron.php"
