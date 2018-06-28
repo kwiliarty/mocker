@@ -13,3 +13,14 @@ In addition, Moodle Docker has wrapped the usual `docker compose` command in `bi
 ### Installation
 
 1. Start by cloning the Moodle Docker project into some folder
+1. Add the mocker repo inside the Moodle Docker installation
+1. Copy `env-dist.sh` as `env.sh`
+1. Set up your environment variables in `env.sh`
+1. In a `bash` shell you can
+        '''
+        source env.sh
+        '''
+1. A more generalized way to load things up is
+        '''
+        . ./env.sh
+        '''
