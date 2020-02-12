@@ -10,7 +10,7 @@ export MOODLE_DOCKER_SELENIUM_VNC_PORT=5934
 # Convenience aliases
 alias mocker="${MOODLE_DOCKER_WWWROOT%/moodle}/bin/moodle-docker-compose"
 alias mocker-behat="mocker exec webserver vendor/bin/behat --config /var/www/behatdata/behatrun/behat/behat.yml"
-alias mocker-behat-init="mocker exec webserver admin/tool/behat/cli/init.php --add-core-features-to-theme=spectral"
+alias mocker-behat-init="mocker exec webserver php admin/tool/behat/cli/init.php --add-core-features-to-theme=spectral"
 alias mocker-behat-hampshire="mocker exec webserver vendor/bin/behat --config /var/www/behatdata/behatrun/behat/behat.yml --tags=@hampshire --suite=spectral"
 alias mocker-cron="mocker exec webserver php admin/cli/cron.php"
 alias mocker-db="mocker exec db mysql -u moodle -pm@0dl3ing moodle"
